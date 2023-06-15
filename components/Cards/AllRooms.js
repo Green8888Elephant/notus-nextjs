@@ -11,7 +11,7 @@ import {ScrollArea} from "@/components/ui/scroll-area";
 import {Collapsible, CollapsibleContent, CollapsibleTrigger} from "@/components/ui/collapsible";
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 
-export default function CreateRoom({ color }) {
+export default function AllRooms({ color }) {
   return (
     <>
       <div
@@ -29,7 +29,7 @@ export default function CreateRoom({ color }) {
                   (color === "light" ? "text-blueGray-700" : "text-white")
                 }
               >
-                Create a room
+                All rooms
               </h3>
             </div>
           </div>
@@ -102,22 +102,125 @@ export default function CreateRoom({ color }) {
             <tbody>
             <tr>
               <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-                <img
-                    src="/img/angular.jpg"
-                    className="h-12 w-12 bg-white rounded-full border"
-                    alt="..."
-                ></img>{" "}
                 <span
                     className={
                         "ml-3 font-bold " +
                         +(color === "light" ? "text-blueGray-600" : "text-white")
                     }
                 >
-                    Angular Now UI Kit PRO
+                    KFC
                   </span>
               </th>
               <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                $1,800 USD
+                <div className="flex place-content-center"><img
+                    src="/img/team-4-470x470.png"
+                    alt="..."
+                    className="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                ></img></div>
+              </td>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <i className="fas fa-circle text-emerald-500 mr-2"></i>{" "}
+                completed
+              </td>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <Popover>
+                  <PopoverTrigger>Users</PopoverTrigger>
+                  <div className="bg-white">
+                    <PopoverContent>
+
+                      <div>name</div>
+                      <div>name</div>
+                      <div>name</div>
+                    </PopoverContent>
+                  </div>
+                </Popover>
+              </td>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <div className="flex items-center">
+                  <span className="mr-2">100%</span>
+                  <div className="relative w-full">
+                    <div className="overflow-hidden h-2 text-xs flex rounded bg-emerald-200">
+                      <div
+                          style={{ width: "100%" }}
+                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
+                <TableDropdown />
+              </td>
+            </tr>
+            <tr>
+              <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+                <span
+                    className={
+                        "ml-3 font-bold " +
+                        +(color === "light" ? "text-blueGray-600" : "text-white")
+                    }
+                >
+                    fsdf34ca432;''a/fadsfsd
+                  </span>
+              </th>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <div className="flex place-content-center"><img
+                    src="/img/team-4-470x470.png"
+                    alt="..."
+                    className="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                ></img></div>
+              </td>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <i className="fas fa-circle text-orange-500 mr-2"></i> pending
+              </td>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <Popover>
+                  <PopoverTrigger>Users</PopoverTrigger>
+                  <div className="bg-white">
+                    <PopoverContent>
+
+                      <div>name</div>
+                      <div>name</div>
+                      <div>name</div>
+                    </PopoverContent>
+                  </div>
+                </Popover>
+              </td>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <div className="flex items-center">
+                  <span className="mr-2">60%</span>
+                  <div className="relative w-full">
+                    <div className="overflow-hidden h-2 text-xs flex rounded bg-red-200">
+                      <div
+                          style={{ width: "60%" }}
+                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
+                <TableDropdown />
+              </td>
+            </tr>
+            <tr>
+              <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+                <span
+                    className={
+                        "ml-3 font-bold " +
+                        +(color === "light" ? "text-blueGray-600" : "text-white")
+                    }
+                >
+                    Пузата хата
+                  </span>
+              </th>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <div className="flex place-content-center"><img
+                    src="/img/team-4-470x470.png"
+                    alt="..."
+                    className="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                ></img></div>
               </td>
               <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                 <i className="fas fa-circle text-emerald-500 mr-2"></i>{" "}
@@ -162,10 +265,10 @@ export default function CreateRoom({ color }) {
   );
 }
 
-CreateRoom.defaultProps = {
+AllRooms.defaultProps = {
   color: "light",
 };
 
-CreateRoom.propTypes = {
+AllRooms.propTypes = {
   color: PropTypes.oneOf(["light", "dark"]),
 };

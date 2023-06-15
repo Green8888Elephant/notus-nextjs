@@ -8,6 +8,7 @@ import CardTable from "components/Cards/CardTable.js";
 
 import Admin from "layouts/Admin.js";
 import CreateRoom from "../../components/Cards/CreateRoom";
+import AllRooms from "@/components/Cards/AllRooms";
 
 export default function Tables() {
   return (
@@ -17,7 +18,7 @@ export default function Tables() {
           <CreateRoom />
         </div>
         <div className="w-full mb-12 px-4">
-          <CardTable color="dark" />
+          <AllRooms color="dark" />
         </div>
       </div>
     </>

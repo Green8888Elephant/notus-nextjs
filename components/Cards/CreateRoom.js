@@ -15,11 +15,13 @@ import {Button} from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
+  DialogDescription, DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger
 } from "@/components/ui/dialog";
+import {Label} from "@/components/ui/label";
+import {ContextMenu, ContextMenuContent, ContextMenuItem, ContextMenuTrigger} from "@/components/ui/context-menu";
 
 export default function CreateRoom({ color }) {
   return (
@@ -100,39 +102,20 @@ export default function CreateRoom({ color }) {
               </td>
               <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                 <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline">Edit Profile</Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[425px]">
+                  <DialogTrigger>Open to add Users</DialogTrigger>
+                  <DialogContent>
                     <DialogHeader>
-                      <DialogTitle>Edit profile</DialogTitle>
+                      <DialogTitle>Are you sure absolutely sure?</DialogTitle>
                       <DialogDescription>
-                        Make changes to your profile here. Click save when you're done.
+                        This action cannot be undone. This will permanently delete your account
+                        and remove your data from our servers.
                       </DialogDescription>
                     </DialogHeader>
-                    <div className="grid gap-4 py-4">
-                      <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="name" className="text-right">
-                          Name
-                        </Label>
-                        <Input id="name" value="Pedro Duarte" className="col-span-3" />
-                      </div>
-                      <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="username" className="text-right">
-                          Username
-                        </Label>
-                        <Input id="username" value="@peduarte" className="col-span-3" />
-                      </div>
-                    </div>
-                    <DialogFooter>
-                      <Button type="submit">Save changes</Button>
-                    </DialogFooter>
                   </DialogContent>
                 </Dialog>
-
               </td>
               <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-                <div className="text-green-600"><Button className="text-green-600">Submit</Button></div>
+                <div className="text-green-600"><Button type="submit" className="text-green-600">Submit</Button></div>
               </td>
             </tr>
 
